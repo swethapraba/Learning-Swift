@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var dialPlacement: UIView?
+    @IBOutlet var label: UILabel?
+    var dial : CircularKnobs?
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        dial = CircularKnobs(frame: knobPlaceholder.bounds)
+        knobPlaceholder.addSubview(dial)
     }
 
     override func didReceiveMemoryWarning() {
