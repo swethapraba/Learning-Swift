@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W7N-xm-S3B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="r5e-EC-s2j">
+            <objects>
+                <navigationController id="W7N-xm-S3B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sH9-ip-IVH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iqO-uJ-xeo" kind="relationship" relationship="rootViewController" id="8LW-IH-xA3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tce-En-hic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TLj-Bh-R1j">
+            <objects>
+                <viewController id="3PH-99-a1w" customClass="ViewController" customModule="Changing_Balance" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mYx-eu-adk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Frw-1a-FHX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bEK-mn-esT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-Cs-cBI">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="FinalGradientSize3_ 850" translatesAutoresizingMaskIntoConstraints="NO" id="qYj-jG-hvw">
+                                        <frame key="frameInset" width="320" height="443"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xW-b0-tLu">
+                                        <frame key="frameInset" minY="443" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You're Balanced!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2i-Ti-g22">
+                                        <frame key="frameInset" minY="464" width="320" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBJ-aq-Tho">
+                                        <frame key="frameInset" minY="484" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QBJ-aq-Tho" firstAttribute="top" secondItem="9xW-b0-tLu" secondAttribute="bottom" constant="20" id="Gij-ia-3XH"/>
+                                    <constraint firstItem="9xW-b0-tLu" firstAttribute="top" secondItem="qYj-jG-hvw" secondAttribute="bottom" constant="20" id="LJs-g0-6a0"/>
+                                    <constraint firstItem="9xW-b0-tLu" firstAttribute="leading" secondItem="cCw-Cs-cBI" secondAttribute="leading" id="SXb-Uy-jnW"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYj-jG-hvw" secondAttribute="trailing" id="TUA-nT-moJ"/>
+                                    <constraint firstItem="qYj-jG-hvw" firstAttribute="leading" secondItem="cCw-Cs-cBI" secondAttribute="leading" id="gtS-9Q-8ec"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cCw-Cs-cBI" firstAttribute="top" secondItem="mYx-eu-adk" secondAttribute="bottom" id="5qt-ml-RHu"/>
+                            <constraint firstAttribute="trailing" secondItem="cCw-Cs-cBI" secondAttribute="trailing" id="AkJ-b7-UHP"/>
+                            <constraint firstItem="cCw-Cs-cBI" firstAttribute="leading" secondItem="bEK-mn-esT" secondAttribute="leading" id="e0D-QI-qGo"/>
+                            <constraint firstItem="Frw-1a-FHX" firstAttribute="top" secondItem="cCw-Cs-cBI" secondAttribute="bottom" id="ncE-QW-GJC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9DA-dD-iY9"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="H2i-Ti-g22" id="7Vw-26-cAM"/>
+                        <outlet property="leftLabel" destination="9xW-b0-tLu" id="c6f-Pf-vY3"/>
+                        <outlet property="picture" destination="qYj-jG-hvw" id="saZ-iR-WCv"/>
+                        <outlet property="rightLabel" destination="QBJ-aq-Tho" id="q0h-fQ-7Hq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gp-Qs-U5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="36"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s5D-V1-vP9">
+            <objects>
+                <viewController id="iqO-uJ-xeo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Giw-YD-Pii"/>
+                        <viewControllerLayoutGuide type="bottom" id="AG7-HN-ETB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FLK-hZ-5NM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vlm-88-ll3">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalGradientSize3_ 850" translatesAutoresizingMaskIntoConstraints="NO" id="Qsh-v4-MB2">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="6Z7-EU-zS5"/>
+                                            <constraint firstAttribute="height" constant="300" id="FIM-cI-3pu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osP-aL-hYj">
+                                        <state key="normal" title="Balance Check"/>
+                                        <connections>
+                                            <segue destination="3PH-99-a1w" kind="show" id="Vzn-xP-K7r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AG7-HN-ETB" firstAttribute="top" secondItem="vlm-88-ll3" secondAttribute="bottom" id="9Zi-se-ipc"/>
+                            <constraint firstItem="vlm-88-ll3" firstAttribute="top" secondItem="Giw-YD-Pii" secondAttribute="bottom" id="Fm4-Y6-9oM"/>
+                            <constraint firstItem="vlm-88-ll3" firstAttribute="leading" secondItem="FLK-hZ-5NM" secondAttribute="leading" id="UII-D3-oIE"/>
+                            <constraint firstAttribute="trailing" secondItem="vlm-88-ll3" secondAttribute="trailing" id="s4z-4W-epy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XMv-Ij-4me"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Fc-2T-d3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FinalGradientSize3_ 850" width="1024" height="1024"/>
+    </resources>
+</document>

@@ -9,46 +9,46 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var leftSlider: UISlider?
-    @IBOutlet weak var rightSlider: UISlider?
-    @IBOutlet weak var leftText: UILabel?
-    @IBOutlet weak var rightText: UILabel?
-    var changeTimer: Timer?
-    var time: Double = 0
-    var dt: Double = 0.1
+    //? vs !
+    @IBOutlet weak var leftSlider: UISlider? //the left (Top) slider
+    @IBOutlet weak var rightSlider: UISlider? //the right (bottom) slider
+    @IBOutlet weak var leftText: UILabel? // left side label for data
+    @IBOutlet weak var rightText: UILabel? //right side label for data
+    var changeTimer: Timer? //the timer
+    var time: Double = 0 // don't remember what this does
+    var dt: Double = 0.1 // the interval
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        leftText?.text = "Hello World"
-        changeTimer = Timer(fireAt: Date.init(), interval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats:true)
-        RunLoop.main.add(changeTimer!, forMode: RunLoopMode.commonModes)
+        leftText?.text = "Hello World" //just set the label text
+        changeTimer = Timer(fireAt: Date.init(), interval: dt, target: self, selector: #selector(update), userInfo: nil, repeats:true) //timer stuff
+        RunLoop.main.add(changeTimer!, forMode: RunLoopMode.commonModes) //some loop?
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
-    func update() {
-        time = time + dt
-        leftSlider?.value = Float((sin(time) + 1) / 2.0)
-        rightSlider?.value = Float((cos(time) + 1) / 2.0)
-        sliderDidChange(sender: leftSlider!)
-        sliderDidChange(sender: rightSlider!)
+    func update() //update sliders based on the sin curves
+    {
+        time = time + dt //increment time
+        leftSlider?.value = Float((sin(time) + 1) / 2.0) //change value to out of [0,1] (instead of [-1,1])
+        rightSlider?.value = Float((cos(time) + 1) / 2.0) //same thing but cos for the right slider
+        sliderDidChange(sender: leftSlider!) //call function to set labels
+        sliderDidChange(sender: rightSlider!) //call functions to set labels
     }
     
-    @IBAction func sliderDidChange(sender: UISlider) {
-        if(sender == leftSlider)
+    @IBAction func sliderDidChange(sender: UISlider) //when the Slider changes, change text
+    {
+        if(sender == leftSlider) //self-explanatory
         {
-            leftText?.text = String( sender.value)
+            leftText?.text = String( sender.value) //set left text to be the value for the time
         }
         else if(sender == rightSlider)
         {
-            rightText?.text = String(sender.value)
+            rightText?.text = String(sender.value) //see above
         }
-        //print("Slider Change")
     }
 
 

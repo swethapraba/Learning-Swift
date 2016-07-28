@@ -31,16 +31,23 @@
                                             <action selector="sliderDidChangeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="fth-WZ-9bE"/>
                                         </connections>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-po-Ggd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-hH-yPE">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMj-kX-jVf">
-                                                <frame key="frameInset" width="301" height="165"/>
+                                                <frame key="frameInset" width="200" height="165"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="CMJ-61-Eo0"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUC-aa-TBT">
-                                                <frame key="frameInset" minX="301" width="42" height="165"/>
+                                                <frame key="frameInset" minX="200" width="143" height="165"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="165" id="JtC-ju-iPV"/>
+                                                    <constraint firstAttribute="width" constant="100" id="r8D-m1-kpU"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
