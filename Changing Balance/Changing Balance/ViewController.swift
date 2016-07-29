@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         {
             print("LEFT IS HEAVIER")
             
-            self.picture?.image = UIImage(named: "leftTiltScale.jpg")
+            self.picture?.image = UIImage(named: "leftHeavier.png")
             
             leftLabel?.isHidden = false //show the labels (with values)
             balanceLabel?.isHidden = true //hide the message that you're balanced
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         {
             print ("RIGHT IS HEAVIER")
             
-            self.picture?.image = UIImage(named: "rightTiltScale.jpg")
+            self.picture?.image = UIImage(named: "rightHeavier.png")
             
             leftLabel?.isHidden = false //show the labels with values
             balanceLabel?.isHidden = true //hide the message that you're balanced
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             //some code
             print("You're balanced!")
             
-            self.picture?.image = UIImage(named: "balancedScale.jpg")
+            self.picture?.image = UIImage(named: "Balanced.png")
             self.picture?.layer.borderWidth = 2
             self.picture?.layer.borderColor = UIColor.black().cgColor //figure out stuff for our shade of pink
             
